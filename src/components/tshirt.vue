@@ -4,15 +4,15 @@
 
 <template>
   <section class="container">
-  <h2>Sweatshirts</h2>
+  <h2>T-Shirts</h2>
 
-  <section class="sweatshirt">
+  <section class="tshirt">
 
     <aside class="top">
       <div class="card">
-        <img src="../assets/web/shredder-hoodie.jpg" alt="sweatshirt">
-        <h3>Localz Shredder Hoodie</h3>
-        <p>$50.00</p>
+        <img src="../assets/web/logo-shirt.jpg" alt="tshirt">
+        <h3>Localz Retro Shirt</h3>
+        <p>$45.00</p>
         <div class="colors">
           <img src="../assets/web/black.jpg" alt="black">
           <img src="../assets/web/grey.jpg" alt="grey">
@@ -20,27 +20,40 @@
           <img src="../assets/web/blue.jpg" alt="blue">
           <p>+4 colors</p>
         </div>
-        <router-link :to="{name:'Order'}" class="orange-btn">Add to bag</router-link>
+        <router-link :to="{name:'Order'}" class="blue-btn">Add to bag</router-link>
       </div>
 
       <div class="card">
-        <img src="../assets/web/lauren-localz.jpg" alt="crew neck">
-        <h3>Localz Shredder crew neck</h3>
-        <p>$50.00</p>
+        <img src="../assets/web/localz-skele-tshirt.jpg" alt="shirt">
+        <h3>Localz Skele Shirt</h3>
+        <p>$35.00</p>
         <div class="colors">
           <img src="../assets/web/orange.jpg" alt="orange">
           <img src="../assets/web/blue.jpg" alt="blue">
           <img src="../assets/web/black.jpg" alt="black">
           <p>+4 colors</p>
         </div>
-        <router-link :to="{name:'Order'}" class="orange-btn">Add to bag</router-link>
+        <router-link :to="{name:'Order'}" class="blue-btn">Add to bag</router-link>
       </div>
     </aside>
 
     <aside class="bottom">
       <div class="card">
-        <img src="../assets/web/nik-localz.jpg" alt="zip-up hoodie">
-        <h3>Localz shredder zip-up hoodie</h3>
+        <img src="../assets/web/surfsup-shirt.jpg" alt="shirt">
+        <h3>Localz Surfs Up Print Shirt</h3>
+        <p>$30.00</p>
+        <div class="colors">
+          <img src="../assets/web/black.jpg" alt="black">
+          <img src="../assets/web/grey.jpg" alt="grey">
+          <img src="../assets/web/orange.jpg" alt="orange">
+          <img src="../assets/web/blue.jpg" alt="blue">
+          <p>+4 colors</p>
+        </div>
+        <router-link :to="{name:'Order'}" class="blue-btn">Add to bag</router-link>
+      </div>
+      <div class="card">
+        <img src="../assets/web/longsleeve-shirt.jpg" alt="shirt">
+        <h3>Localz Surfs Up Long Sleeve</h3>
         <p>$50.00</p>
         <div class="colors">
           <img src="../assets/web/black.jpg" alt="black">
@@ -49,7 +62,7 @@
           <img src="../assets/web/blue.jpg" alt="blue">
           <p>+4 colors</p>
         </div>
-        <router-link :to="{name:'Order'}" class="orange-btn">Add to bag</router-link>
+        <router-link :to="{name:'Order'}" class="blue-btn">Add to bag</router-link>
       </div>
     </aside>
 
@@ -59,16 +72,27 @@
 
 <style scoped>
 section.container {
+  background: #DC6327;
   padding: 3rem 0;
+
+  h3 {
+    font-size: 14px;
+    margin-bottom: 1px;
+    color: #f9f9f9;
+  }
+
+  p{
+    color: #f9f9f9;
+  }
 
   h2 {
     text-align: center;
     font-family: "PT Sans", sans-serif;
     text-transform: uppercase;
-
+    color: #f9f9f9;
   }
 
-  section.sweatshirt {
+  section.tshirt {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -90,11 +114,6 @@ section.container {
           border-right: 8px solid #1D84A6;
           border-bottom: 8px solid #1D84A6;
 
-        }
-
-        h3 {
-          font-size: 14px;
-          margin-bottom: 1px;
         }
 
         div.colors {
@@ -132,11 +151,6 @@ section.container {
           border-bottom: 8px solid #1D84A6;
         }
 
-        h3 {
-          font-size: 14px;
-          margin-bottom: 1px;
-        }
-
         div.colors {
           display: flex;
           gap: 4px;
@@ -165,8 +179,8 @@ section.container {
   }
 
   aside.bottom{
-   padding-left: 10.5rem;
-    width: 86%;
+    display: flex;
+    justify-content: space-around;
   }
 }
 

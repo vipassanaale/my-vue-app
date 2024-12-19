@@ -2,6 +2,9 @@
 import MainTemplate from "../templates/MainTemplate.vue";
 import Sweatshirt from "./sweatshirt.vue";
 import ProductsByCategory from "./productsByCategory.vue";
+import tshirt from "./tshirt.vue"
+import hat from "./hat.vue"
+import sticker from "./sticker.vue"
 </script>
 
 <template>
@@ -13,12 +16,15 @@ import ProductsByCategory from "./productsByCategory.vue";
     </section>
 
     <sweatshirt/>
-
+    <tshirt/>
+    <hat/>
+    <sticker/>
+<!--
     <products-by-category category="stickers"/>
     <products-by-category category="sweatshirts"/>
     <products-by-category category="t-shirts"/>
     <products-by-category category="hats"/>
-
+-->
 
   </main-template>
 </template>
@@ -28,11 +34,10 @@ import ProductsByCategory from "./productsByCategory.vue";
 section.hero{
   align-items: center;
   display: inline-block;
+  margin-bottom: 1rem;
   div.center {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
+    width: 95%;
 
     img {
       width: 100%;

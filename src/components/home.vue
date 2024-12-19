@@ -52,16 +52,16 @@ section.top{
 
   div.landing{
     flex-direction: column;
+    width: 50%;
     h1{
-      font-size: 14px;
+      font-size: 20px;
       font-family: "PT Sans", sans-serif;
       margin-bottom: 2rem;
       color: #FFFAEB;
     }
     p{
-      font-size: 9px;
+      font-size: 10px;
       font-family: "Arial", sans-serif;
-      margin-bottom: 4rem;
       color: #FFFAEB;
     }
     a{
@@ -82,13 +82,14 @@ section.top{
   section.top {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 4rem;
     padding-left: 2rem;
     background-color: #FFFAEB;
 
     div.landing {
       flex-direction: column;
       margin-left: 4rem;
+      width: 20%;
 
       h1 {
         font-size: 48px;
@@ -120,8 +121,8 @@ section.top{
 
     div.image {
       img {
-        margin-left: 20rem;
-        width: 60%;
+        margin-left: 4rem;
+        width: 110%;
         height: auto;
         border-radius: 50px;
         border-right: #DC6327 solid 30px;
