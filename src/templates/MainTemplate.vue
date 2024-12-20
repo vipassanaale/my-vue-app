@@ -13,7 +13,7 @@
       </div>
 
       <div class="nav-right">
-        <router-link :to="{name: 'About'}">Contact</router-link>
+        <router-link :to="'/about#contact'">Contact</router-link>
         <router-link :to="{name: 'About'}">About</router-link>
         <router-link :to="{name: 'Menu'}">Order</router-link>
         <router-link :to="{name:'Home'}" class="orange-btn">Home</router-link>
@@ -43,7 +43,7 @@
       <div class="order">
         <router-link :to="{name:'Order'}">Order Details</router-link>
         <router-link :to="'/home#location'" class="lower">Find Us</router-link>
-        <router-link :to="{name:'About'}" class="lower">Contact</router-link>
+        <router-link :to="'/about#contact'" class="lower">Contact</router-link>
         <router-link :to="{name:'About'}" class="lower">About</router-link>
         <router-link :to="'/home#catering'" class="lower">Catering</router-link>
       </div>

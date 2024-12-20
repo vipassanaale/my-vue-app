@@ -1,10 +1,14 @@
 <script>
 import MainTemplate from "../templates/MainTemplate.vue";
+import contact from "../components/contact.vue"; // Move this above `export default`
 
 export default {
-name: "About",
-  components: {MainTemplate}
-}
+  name: "About",
+  components: {
+    MainTemplate,
+    contact,
+  },
+};
 </script>
 
 <template>
@@ -23,6 +27,11 @@ name: "About",
       <p><img src="../assets/web/about2.jpg" alt="tacos"></p>
       <p><img src="../assets/web/about3.jpg" alt="burritos"></p>
     </div>
+
+    <section id="contact">
+    <contact/>
+    </section>
+
   </main-template>
 </template>
 
@@ -76,7 +85,8 @@ div.images{
       }
     }
     div.content {
-      padding: 0 18rem;
+      padding: 2rem 18rem;
+      margin-bottom: 4rem;
     }
   }
   div.images{
