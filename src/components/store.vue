@@ -1,7 +1,6 @@
 <script setup>
 import MainTemplate from "../templates/MainTemplate.vue";
 import Sweatshirt from "./sweatshirt.vue";
-import ProductsByCategory from "./productsByCategory.vue";
 import tshirt from "./tshirt.vue"
 import hat from "./hat.vue"
 import sticker from "./sticker.vue"
@@ -15,16 +14,21 @@ import sticker from "./sticker.vue"
       </div>
     </section>
 
+    <section id="sweatshirts">
     <sweatshirt/>
+    </section>
+
+    <section id="tshirts">
     <tshirt/>
+    </section>
+
+    <section id="hats">
     <hat/>
+    </section>
+
+    <section id="stickers">
     <sticker/>
-<!--
-    <products-by-category category="stickers"/>
-    <products-by-category category="sweatshirts"/>
-    <products-by-category category="t-shirts"/>
-    <products-by-category category="hats"/>
--->
+    </section>
 
   </main-template>
 </template>

@@ -1,5 +1,13 @@
 <script setup>
+import { addToCart } from '../utils/cartUtils';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
+
+function handleAddToCart(item) {
+  addToCart(item);
+  router.push({ name: 'Order' });
+}
 </script>
 
 <template>
@@ -20,7 +28,9 @@
           <img src="../assets/web/blue.jpg" alt="blue">
           <p>+4 colors</p>
         </div>
-        <router-link :to="{name:'Order'}" class="blue-btn">Add to bag</router-link>
+        <button @click="handleAddToCart({ name: 'Localz Reto Shirt', price: 45 })" class="blue-btn">
+          Add to bag
+        </button>
       </div>
 
       <div class="card">
@@ -33,7 +43,9 @@
           <img src="../assets/web/black.jpg" alt="black">
           <p>+4 colors</p>
         </div>
-        <router-link :to="{name:'Order'}" class="blue-btn">Add to bag</router-link>
+        <button @click="handleAddToCart({ name: 'Localz Skele Shirt', price: 35 })" class="blue-btn">
+          Add to bag
+        </button>
       </div>
     </aside>
 
@@ -49,8 +61,11 @@
           <img src="../assets/web/blue.jpg" alt="blue">
           <p>+4 colors</p>
         </div>
-        <router-link :to="{name:'Order'}" class="blue-btn">Add to bag</router-link>
+        <button @click="handleAddToCart({ name: 'Localz Surfs Up Print Shirt', price: 30 })" class="blue-btn">
+          Add to bag
+        </button>
       </div>
+
       <div class="card">
         <img src="../assets/web/longsleeve-shirt.jpg" alt="shirt">
         <h3>Localz Surfs Up Long Sleeve</h3>
@@ -62,7 +77,9 @@
           <img src="../assets/web/blue.jpg" alt="blue">
           <p>+4 colors</p>
         </div>
-        <router-link :to="{name:'Order'}" class="blue-btn">Add to bag</router-link>
+        <button @click="handleAddToCart({ name: 'Localz Surfs Up Long Sleeve', price: 50 })" class="blue-btn">
+          Add to bag
+        </button>
       </div>
     </aside>
 

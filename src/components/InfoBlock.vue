@@ -9,26 +9,29 @@
       <p>Localz Cafe, established in the summer of 2020 by three Minnetonka High School graduates, aims to provide
         Lake Minnetonka visitors with fresh and delicious lake day meals. Our food is prepared with care, using
         nutritious ingredients and served with a perfect char. Find our current locations on our map!</p>
-      <a href="#">Read More</a>
+      <router-link :to="{ name:'About'}">Read More</router-link>
     </aside>
 
     <aside>
       <img src="../assets/IMG_2933.jpg" alt="owners of Localz Cafe">
     </aside>
 
-    <aside>
-      <img src="../assets/frank-zhang-uZj6OAYPqrQ-unsplash.jpg" alt="catering image">
-    </aside>
+    <section id="catering">
+      <aside>
+        <img src="../assets/frank-zhang-uZj6OAYPqrQ-unsplash.jpg" alt="catering image">
+      </aside>
 
-    <aside>
-      <h3>Catering</h3>
-      <p>In need of food for an event? We’ve gotcha covered! Whether it’s a quaint get-together or a large
-        gathering, let us help you curate the best event possible. Our food truck brings the same fresh, delicious
-        meals that have made us a local favorite to your special occasion.</p>
-      <a href="#">Order Catering</a>
-    </aside>
+      <aside>
+        <h3>Catering</h3>
+        <p>In need of food for an event? We’ve gotcha covered! Whether it’s a quaint get-together or a large
+          gathering, let us help you curate the best event possible. Our food truck brings the same fresh, delicious
+          meals that have made us a local favorite to your special occasion.</p>
+        <a href="mailto:localzcafe.catering@gmail.com?subject=Localz Cafe catering inquiry">Order Catering</a>
+      </aside>
+    </section>
   </section>
 </template>
+
 
 <style scoped>
 /* Mobile first */
@@ -39,6 +42,19 @@ section.info-block {
   gap: 3rem;
   margin: 1rem 0;
   padding: 2rem;
+
+  section.info-block, #catering {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  #catering aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   aside {
     display: flex;
@@ -80,6 +96,15 @@ section.info-block {
   }
 
   @media screen and (width > 600px) {
+    section.info-block, #catering {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    #catering aside {
+      flex-basis: 48%;
+    }
+
     flex-direction: row;
     flex-wrap: wrap;
 

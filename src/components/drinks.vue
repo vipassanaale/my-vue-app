@@ -1,5 +1,13 @@
 <script setup>
+import { addToCart } from '../utils/cartUtils';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
+
+function handleAddToCart(item) {
+  addToCart(item);
+  router.push({ name: 'Order' });
+}
 </script>
 
 <template>
@@ -13,6 +21,9 @@
         <div class="content">
           <h4>Tropical . . . . . . $7</h4>
           <p>mango, peach, pineapple, coconut creamer, honey vanilla</p>
+          <button @click="handleAddToCart({ name: 'Tropical Smoothie', price: 7 })" class="orange-btn">
+            Add to Order
+          </button>
         </div>
       </aside>
 
@@ -21,6 +32,9 @@
         <div class="content">
           <h4>Hydrate . . . . . . $8</h4>
           <p>Watermelon, strawberry, banana, cucumber, mint, lime, coconut water</p>
+          <button @click="handleAddToCart({ name: 'Hydrate Smoothie', price: 8 })" class="orange-btn">
+            Add to Order
+          </button>
         </div>
       </aside>
 
@@ -32,6 +46,9 @@
         <div class="content">
           <h4>Blended Bullet . . . . . . $6</h4>
           <p>Cold brew coffee, banana, coconut creamer, honey</p>
+          <button @click="handleAddToCart({ name: 'Blended Bullet Coffee', price: 6 })" class="orange-btn">
+            Add to Order
+          </button>
         </div>
       </aside>
 
@@ -42,8 +59,11 @@
       <aside>
         <img src="../assets/jarritos.jpg" alt="jarritos">
         <div class="content">
-          <h4>Jarritos . . . . . . $6</h4>
+          <h4>Jarritos . . . . . . . . . . . . . . . . . . . . . . . $6</h4>
           <p>Lime, mandarin, pineapple, guava</p>
+          <button @click="handleAddToCart({ name: 'Jarrito', price: 6 })" class="orange-btn">
+            Add to Order
+          </button>
         </div>
       </aside>
 
@@ -51,23 +71,23 @@
         <img src="../assets/mexicancoke.jpg" alt="mexican coke">
         <div class="content">
           <h4>Mexican Coke / Sprite . . . . . . $3</h4>
-          <p>  </p>
+          <button @click="handleAddToCart({ name: 'Mexican Soda', price: 3 })" class="orange-btn">
+            Add to Order
+          </button>
         </div>
       </aside>
 
       <aside>
         <img src="../assets/water.jpeg" alt="bottled water next to tacos">
         <div class="content">
-          <h4>Bottled Water . . . . . . $1</h4>
-          <p>  </p>
+          <h4>Bottled Water . . . . . . . . . . . . . . . $1</h4>
+          <button @click="handleAddToCart({ name: 'Bottled Water', price: 1 })" class="orange-btn">
+            Add to Order
+          </button>
         </div>
       </aside>
 
     </section>
-
-    <p>
-      <router-link :to="{name: 'Order'}" class="orange-btn">Order Now</router-link>
-    </p>
   </section>
 
 </template>
@@ -122,12 +142,17 @@ section.menu3 {
           color: #1a1a1a;
           text-align: left;
         }
+        button.orange-btn{
+          width: 45%;
+          font-size: 9px;
+          white-space: nowrap;
+        }
       }
     }
   }
 
   img {
-    width: 30%;
+    width: 40%;
     height: auto;
     border-radius: 14px;
     border-right: solid 8px #1D84A6;
@@ -146,8 +171,8 @@ section.menu3 {
       font-size: 18px;
       color: #DC6327;
       text-transform: uppercase;
-      text-align: center;
-      padding-top: 2rem;
+      //text-align: left;
+      //padding-top: 2rem;
     }
   }
 

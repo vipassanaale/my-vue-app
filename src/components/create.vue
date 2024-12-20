@@ -43,7 +43,7 @@
   </section>
 
   <p>
-    <router-link :to="{ name: 'Order' }" class="orange-btn">
+    <router-link :to="{ name: 'Menu' }" class="orange-btn">
       Order Now
     </router-link>
   </p>

@@ -1,5 +1,13 @@
 <script setup>
+import { addToCart } from '../utils/cartUtils';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
+
+function handleAddToCart(item) {
+  addToCart(item);
+  router.push({ name: 'Order' });
+}
 </script>
 
 <template>
@@ -20,7 +28,9 @@
           <img src="../assets/web/blue.jpg" alt="blue">
           <p>+4 colors</p>
         </div>
-        <router-link :to="{name:'Order'}" class="orange-btn">Add to bag</router-link>
+        <button @click="handleAddToCart({ name: 'Localz Shredder Hoodie', price: 50 })" class="orange-btn">
+          Add to bag
+        </button>
       </div>
 
       <div class="card">
@@ -33,7 +43,9 @@
           <img src="../assets/web/black.jpg" alt="black">
           <p>+4 colors</p>
         </div>
-        <router-link :to="{name:'Order'}" class="orange-btn">Add to bag</router-link>
+        <button @click="handleAddToCart({ name: 'Localz Skeleton Trucker Hat', price: 35 })"  class="orange-btn">
+          Add to bag
+        </button>
       </div>
     </aside>
 
@@ -49,7 +61,9 @@
           <img src="../assets/web/blue.jpg" alt="blue">
           <p>+4 colors</p>
         </div>
-        <router-link :to="{name:'Order'}" class="orange-btn">Add to bag</router-link>
+        <button @click="handleAddToCart({ name: 'Localz Shredder Crew Neck', price: 50 })" class="orange-btn">
+          Add to bag
+        </button>
       </div>
     </aside>
 

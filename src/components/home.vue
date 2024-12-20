@@ -15,7 +15,7 @@ import Instagram from "./instagram.vue";
         <h1>Localz Cafe, Your Life Boat Meal</h1>
         <p>Localz Cafe is a local food truck based off Lake Minnetonka that sells the best
           tacos and burritos you need, for your perfect lake day.</p>
-        <a href="#">learn more</a>
+        <router-link :to="{ name: 'About'}" class="orange-btn">Learn more</router-link>
       </div>
 
       <div class="image">
@@ -29,7 +29,9 @@ import Instagram from "./instagram.vue";
 
     <create/>
 
+    <section id="location">
     <location/>
+    </section>
 
     <reviews/>
 

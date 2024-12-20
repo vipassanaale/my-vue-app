@@ -1,29 +1,41 @@
 <script setup>
+import { useRouter } from 'vue-router';
+import { addToCart } from '../utils/cartUtils'; // Utility file to handle cart
 
+const router = useRouter();
+
+function handleAddToCart(item) {
+  addToCart(item); // Adds the selected item to the cart
+  router.push({ name: 'Order' }); // Navigates to the Order page
+}
 </script>
 
 <template>
   <section class="container">
     <h2>Stickers</h2>
 
-      <aside>
-        <div class="card">
-          <img src="../assets/web/sticker1.jpg" alt="localz sticker">
-          <h3>Localz Retro Sticker</h3>
-          <p>$15.00</p>
-          <router-link :to="{name:'Order'}" class="blue-btn">Add to bag</router-link>
-        </div>
+    <aside>
+      <div class="card">
+        <img src="../assets/web/sticker1.jpg" alt="localz sticker">
+        <h3>Localz Retro Sticker</h3>
+        <p>$15.00</p>
+        <button @click="handleAddToCart({ name: 'Localz Retro Sticker', price: 15 })" class="blue-btn">
+          Add to bag
+        </button>
+      </div>
 
-        <div class="card">
-          <img src="../assets/web/sticker2.jpg" alt="localz sticker">
-          <h3>Localz Holiday Sticker</h3>
-          <p>$15.00</p>
-          <router-link :to="{name:'Order'}" class="blue-btn">Add to bag</router-link>
-        </div>
-      </aside>
-
+      <div class="card">
+        <img src="../assets/web/sticker2.jpg" alt="localz sticker">
+        <h3>Localz Holiday Sticker</h3>
+        <p>$15.00</p>
+        <button @click="handleAddToCart({ name: 'Localz Holiday Sticker', price: 15 })" class="blue-btn">
+          Add to bag
+        </button>
+      </div>
+    </aside>
   </section>
-</template> -->
+</template>
+
 
 <style scoped>
 section.container {
@@ -36,7 +48,7 @@ section.container {
     color: #f9f9f9;
   }
 
-  p{
+  p {
     color: #f9f9f9;
   }
 
@@ -47,24 +59,24 @@ section.container {
     color: #f9f9f9;
   }
 
-    aside {
+  aside {
+    display: flex;
+    flex-direction: row;
+
+    div.card {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      padding: 1rem;
+      align-items: center;
 
-      div.card {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-        align-items: center;
-
-        img {
-          width: 75%;
-          height: auto;
-          border-radius: 100px;
-          border-right: 8px solid #1D84A6;
-          border-bottom: 8px solid #1D84A6;
-        }
+      img {
+        width: 75%;
+        height: auto;
+        border-radius: 100px;
+        border-right: 8px solid #1D84A6;
+        border-bottom: 8px solid #1D84A6;
       }
+    }
   }
 }
 
@@ -78,5 +90,4 @@ section.container {
     max-width: 18%;
   }
 }
-
 </style>

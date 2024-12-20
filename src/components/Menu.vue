@@ -12,9 +12,18 @@ import drinks from "./drinks.vue";
         <img src="../assets/web/menu-hero.jpg">
       </div>
     </section>
+
+    <section id="tacos">
     <tacos/>
+    </section>
+
+    <section id="burritos">
     <burrito/>
+    </section>
+
+    <section id="drinks">
     <drinks/>
+    </section>
 
   </main-template>
 </template>

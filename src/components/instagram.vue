@@ -8,7 +8,7 @@
       <h3>Find Us on Instagram</h3>
       <p>Check us out on Instagram and make sure to keep those notifications on and ready to watch out for special promotions and events we hold on weekends!</p>
       <p><strong>Don’t forget to tag us with the hashtag #localzcafe! </strong></p>
-      <a class="orange-btn" href="#">Instagram</a>
+      <a class="orange-btn" href="https://www.instagram.com/localzcafe?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
     </div>
     <div class="pictures">
       <img src="../assets/IG1.png" alt="feed">

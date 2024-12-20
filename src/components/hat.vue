@@ -1,5 +1,13 @@
 <script setup>
+import { addToCart } from '../utils/cartUtils';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
+
+function handleAddToCart(item) {
+  addToCart(item);
+  router.push({ name: 'Order' });
+}
 </script>
 
 <template>
@@ -7,8 +15,8 @@
     <h2>Hats</h2>
 
     <section class="hats">
-
       <aside>
+
         <div class="card">
           <img src="../assets/web/trucker-hat.jpg" alt="trucker hat">
           <h3>Localz Skeleton Trucker Hat</h3>
@@ -20,12 +28,15 @@
             <img src="../assets/web/blue.jpg" alt="blue">
             <p>+4 colors</p>
           </div>
-          <router-link :to="{name:'Order'}" class="orange-btn">Add to bag</router-link>
+          <button @click="handleAddToCart({ name: 'Localz Skeleton Trucker Hat', price: 35 })"  class="orange-btn">
+            Add to bag
+          </button>
         </div>
+
 
         <div class="card">
           <img src="../assets/web/panel-hat.jpg" alt="panel hat">
-          <h3>Localz Skeleton 5-Pannel Hat</h3>
+          <h3>Localz Skeleton 5-Panel Hat</h3>
           <p>$35.00</p>
           <div class="colors">
             <img src="../assets/web/orange.jpg" alt="orange">
@@ -33,13 +44,14 @@
             <img src="../assets/web/black.jpg" alt="black">
             <p>+4 colors</p>
           </div>
-          <router-link :to="{name:'Order'}" class="orange-btn">Add to bag</router-link>
+          <button @click="handleAddToCart({ name: 'Localz Skeleton 5-Panel Hat', price: 35 })" class="orange-btn">
+            Add to bag
+          </button>
         </div>
       </aside>
-
     </section>
   </section>
-</template> -->
+</template>
 
 <style scoped>
 section.container {
