@@ -148,7 +148,6 @@ section.order {
 
       p {
         font-size: 20px;
-        background-color: #DC6327;
         padding: 2rem 0;
       }
     }

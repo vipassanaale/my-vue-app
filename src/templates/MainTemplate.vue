@@ -9,13 +9,13 @@
         <router-link :to="'/menu#tacos'">Tacos</router-link>
         <router-link :to="'/menu#burritos'">Burritos</router-link>
         <router-link :to="'/menu#drinks'">Drinks</router-link>
-        <router-link :to="'/home#catering'">Catering</router-link>
+        <router-link :to="{name:'Store'}">Store</router-link>
       </div>
 
       <div class="nav-right">
         <router-link :to="{name: 'About'}">Contact</router-link>
         <router-link :to="{name: 'About'}">About</router-link>
-        <router-link :to="{name: 'Order'}">Order</router-link>
+        <router-link :to="{name: 'Menu'}">Order</router-link>
         <router-link :to="{name:'Home'}" class="orange-btn">Home</router-link>
       </div>
     </header>
