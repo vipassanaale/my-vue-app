@@ -171,8 +171,6 @@ section.menu3 {
       font-size: 18px;
       color: #DC6327;
       text-transform: uppercase;
-      //text-align: left;
-      //padding-top: 2rem;
     }
   }
 

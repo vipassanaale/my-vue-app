@@ -5,8 +5,8 @@ import { addToCart } from '../utils/cartUtils'; // Utility file to handle cart
 const router = useRouter();
 
 function handleAddToCart(item) {
-  addToCart(item); // Adds the selected item to the cart
-  router.push({ name: 'Order' }); // Navigates to the Order page
+  addToCart(item);
+  router.push({ name: 'Order' });
 }
 </script>
 
